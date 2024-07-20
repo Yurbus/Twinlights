@@ -18,7 +18,9 @@
 	}
 }
 
-nav,
+nav {
+	display: flex;
+}
 footer,
 header,
 aside {
@@ -57,6 +59,7 @@ body {
 }
 
 body {
+	background: var(--black-color);
 	overscroll-behavior: none;
 	line-height: var(--bs-line-height);
 	font-weight: var(--bs-font-weight);
@@ -64,7 +67,6 @@ body {
 	text-size-adjust: 100%;
 	font-family: var(--bs-font-family);
 	font-size: var(--bs-font-size);
-	font-weight: var(--bs-font-weight);
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
 }
@@ -100,6 +102,7 @@ button {
 }
 
 a {
+	color: var(--white-color);
 	user-select: none;
 	text-decoration: none;
 

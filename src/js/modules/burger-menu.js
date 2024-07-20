@@ -40,4 +40,5 @@ export class BurgerMenu extends Popup {
 	get isMenuOpen() {
 		return this.html.classList.contains('menu-open');
 	}
+
 }

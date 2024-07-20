@@ -23,24 +23,84 @@
 		.header-is-sticky & {
 			block-size: rem($header-height - 50);
 		}
+    .header__logo {
+      font-weight: 900;
+      font-size: 24px;
+      color: var(--white-color);
+      text-transform: uppercase;
+    }
     .header__menu{
       @include media-mx(768) {
         position: absolute;
         top: 80px;
         right: 20px;
+        display: flex;
       }
       .menu__list {
         display: flex;
-        .menu__item {
-          margin-right: 10px;
+        flex-wrap: wrap;
+        .menu-item {
+          a {
+            display: flex;
+            white-space: nowrap;
+            color: var(--grey-color);
+            font-weight: 500;
+            font-size: 16px;
+            &:hover {
+              color: var(--white-color);
+            }
+          }
+        }
+        .menu-item:not(:last-child) {
+          margin-right: clamp(10px, 4vw, 40px);
         }
       }
-
+      .header__btn {
+        margin-left: 20px;
+        min-width: 146px;
+        .book__call {
+          font-weight: 700;
+          font-size: 16px;
+          padding: 12px 29px;
+          border-radius: 30px;
+          background: var(--primary-color);
+          &:hover {
+            background: var(--primary-hover-color);
+          }
+        }
+      }
     }
 	}
+  @media (max-width:767.98px) {
+    .header__menu {
+      display: flex;
+      flex-direction: column;
+      transform: translateX(120%);
+      background: #131313;
+      padding: 30px;
+      .menu__list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .menu-item {
+          margin-bottom: 15px;
+          margin-right: 0;
+          a {
+            text-align: center;
+          }
+        }
+        .menu-item:not(:last-child) {
+          margin-right: 0;
+        }
+      }
+      .header__btn {
+        margin-left: 0;
+        margin-top: 20px;
+      }
+    }
+  }
 }
-
-// Burger
+// --- Burger menu -----------
 .icon-menu {
   display: none;
 
@@ -61,7 +121,7 @@
       position: absolute;
       width: 100%;
       height: rem(2);
-      background-color: #000;
+      background-color: #fff;
     }
 
     &::before {
@@ -94,3 +154,6 @@
   }
 }
 
+.menu-open > .header__menu {
+  transform: translateX(0);
+}

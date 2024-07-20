@@ -8,7 +8,7 @@
  */
 // import { MousePRLX } from './libs/parallaxMouse'
 // import AOS from 'aos'
-// import Swiper, { Navigation, Pagination } from 'swiper';
+import Swiper, { Navigation, Pagination } from 'swiper';
 
 import { BaseHelpers } from './helpers/base-helpers';
 import { PopupManager } from './modules/popup-manager';
@@ -64,3 +64,4 @@ new Accordion('.accordion', {
 	defaultOpen: [], // [0,1]
 	collapsedClass: 'open',
 });
+
