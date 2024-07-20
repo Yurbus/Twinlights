@@ -9,7 +9,7 @@
 	.header-is-sticky & {
 		// ..стили для липкого хедера
 		position: fixed;
-		background-color: var(--primary-color);
+		background-color: var(--black-color);
 	}
 
 	// .header__container
@@ -21,7 +21,7 @@
     position: relative;
 
 		.header-is-sticky & {
-			block-size: rem($header-height - 50);
+			block-size: rem($header-height - 30);
 		}
     .header__logo {
       font-weight: 900;
