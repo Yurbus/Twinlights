@@ -2,8 +2,14 @@
 
 .title__style {
     font-weight: 700;
-    font-size: 64px;
+    font-size: clamp(32px, 6vw, 64px);
     color: var(--white-color);
+}
+.red__subtitle {
+    font-weight: 500;
+    font-size: 18px;
+    color: #f00;
+    margin-bottom: 8px;
 }
 
 .primary_btn {
@@ -13,4 +19,36 @@
     padding: 17px 57px;
     border-radius: 30px;
     background: var(--primary-color);
+}
+
+
+//------ colors circle --------
+
+.circle__blue::after,
+.circle__green::after,
+.circle__purple::after,
+.circle__orange::after,
+.circle__red::after  {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    left: -14px;
+    top: 4px;
+    border-radius: 50%;
+}
+.circle__blue::after {
+    background: #00F0FF;
+}
+.circle__green::after {
+    background: #00FF47;
+}
+.circle__purple::after {
+    background: #CC00FF;
+}
+.circle__orange::after {
+    background: #FF9900;
+}
+.circle__red::after {
+   background: #FF0000;
 }

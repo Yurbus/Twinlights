@@ -1,6 +1,7 @@
 @import "../config/functions";
 @import "../config/mixins";
 @import "../config/root";
+
 .header {
 	z-index: 50;
 	inline-size: 100%;
@@ -23,7 +24,7 @@
 		.header-is-sticky & {
 			block-size: rem($header-height - 30);
 		}
-    .header__logo {
+    .logo {
       font-weight: 900;
       font-size: 24px;
       color: var(--white-color);

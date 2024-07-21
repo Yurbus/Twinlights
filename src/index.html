@@ -10,6 +10,8 @@
       <main class="page">
         <div data-observ></div>
           @@include('html/main-page/hero.html')
+          @@include('html/main-page/main-products.html')
+
        
 
 
@@ -23,5 +25,20 @@
     </div>
 
     @@include('html/popup-example.html')
+     <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 4,
+        spaceBetween: 30,
+        centeredSlides: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+    </script>
   </body>
 </html>
